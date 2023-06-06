@@ -21,7 +21,15 @@
 </head>
 <body>
     <h1>抽奖结果</h1>
-    <h2>{{ result }}</h2>
+    <h2>恭喜您获得 {{ prize }}！</h2>
+    
+    {% if image_path %}
+    <img src="{{ image_path }}" alt="奖品图片">
+    {% endif %}
+
+    {% if congrats_message %}
+    <p>{{ congrats_message }}</p>
+    {% endif %}
 </body>
 </html>
 
